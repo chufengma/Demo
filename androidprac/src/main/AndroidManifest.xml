@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onfengma.androidprac" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".DataBindingActivity"
+            android:label="@string/title_activity_data_binding" />
+        <activity
+            android:name=".WindowActivity"
+            android:label="@string/hello_world" />
+        <activity
+            android:name=".EnterActivity"
+            android:label="@string/title_activity_enter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SwipeRefreshActivity"
+            android:label="@string/title_activity_swipe_refresh" >
+        </activity>
+        <activity
+            android:name=".RecycleVIewActivity"
+            android:label="@string/title_activity_recycle_view" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidPrac</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_data_binding">DataBindingActivity</string>
+    <string name="title_activity_enter">EnterActivity</string>
+    <string name="title_activity_swipe_refresh">SwipeRefreshActivity</string>
+    <string name="title_activity_recycle_view">RecycleVIewActivity</string>
+</resources>
