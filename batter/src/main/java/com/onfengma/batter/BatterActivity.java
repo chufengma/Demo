@@ -1,10 +1,11 @@
 package com.onfengma.batter;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class BatterActivity extends Activity {
@@ -35,5 +36,10 @@ public class BatterActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void onClick(View view) {
+        startActivity(new Intent(this, Affinity3Activity.class));
     }
 }

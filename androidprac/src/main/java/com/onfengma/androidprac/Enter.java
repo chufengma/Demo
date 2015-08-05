@@ -7,7 +7,9 @@ public enum Enter {
     DataBindingActivity(DataBindingActivity.class),
     WindowActivity(WindowActivity.class),
     SwipeRefreshActivity(SwipeRefreshActivity.class),
-    RecycleVIewActivity(RecycleVIewActivity.class);
+    RecycleVIewActivity(RecycleVIewActivity.class),
+    TaskAffiniActivity(TaskAffiniActivity.class),
+    FrameAnimationActivity(FrameAnimationActivity.class);
 
     private Class clazz;
 

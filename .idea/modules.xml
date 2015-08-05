@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Demo.iml" filepath="$PROJECT_DIR$/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoRomote.iml" filepath="$PROJECT_DIR$/DemoRomote.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidprac/androidprac.iml" filepath="$PROJECT_DIR$/androidprac/androidprac.iml" />
       <module fileurl="file://$PROJECT_DIR$/batter/batter.iml" filepath="$PROJECT_DIR$/batter/batter.iml" />
       <module fileurl="file://$PROJECT_DIR$/vedio/vedio.iml" filepath="$PROJECT_DIR$/vedio/vedio.iml" />

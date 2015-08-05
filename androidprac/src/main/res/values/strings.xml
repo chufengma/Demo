@@ -7,4 +7,8 @@
     <string name="title_activity_enter">EnterActivity</string>
     <string name="title_activity_swipe_refresh">SwipeRefreshActivity</string>
     <string name="title_activity_recycle_view">RecycleVIewActivity</string>
+    <string name="title_activity_task_affini">TaskAffiniActivity</string>
+    <string name="title_activity_affini1">Affini1Activity</string>
+    <string name="title_activity_affini2">Affini2Activity</string>
+    <string name="title_activity_frame_animation">FrameAnimationActivity</string>
 </resources>
