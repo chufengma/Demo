@@ -9,7 +9,9 @@ public enum Enter {
     SwipeRefreshActivity(SwipeRefreshActivity.class),
     RecycleVIewActivity(RecycleVIewActivity.class),
     TaskAffiniActivity(TaskAffiniActivity.class),
-    FrameAnimationActivity(FrameAnimationActivity.class);
+    FrameAnimationActivity(FrameAnimationActivity.class),
+    GuidenceActivity(GuidenceActivity.class),
+    SwipeFinishFatherActivity(SwipeFinishFatherActivity.class);
 
     private Class clazz;
 

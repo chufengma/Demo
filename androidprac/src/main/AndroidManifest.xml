@@ -41,7 +41,25 @@
             android:label="@string/title_activity_affini2" />
         <activity
             android:name=".FrameAnimationActivity"
-            android:label="@string/title_activity_frame_animation"></activity>
+            android:label="@string/title_activity_frame_animation" />
+
+        <service
+            android:name=".DemoService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".GuidenceActivity"
+            android:label="@string/title_activity_guidence"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".SwipeFinishActivity"
+            android:label="@string/title_activity_swipe_finish"
+            android:theme="@style/SwipeBack" />
+        <activity
+            android:name=".SwipeFinishFatherActivity"
+            android:theme="@style/SwipeBack"
+            android:label="@string/title_activity_swipe_finish_father"></activity>
     </application>
 
 </manifest>

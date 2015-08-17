@@ -11,4 +11,7 @@
     <string name="title_activity_affini1">Affini1Activity</string>
     <string name="title_activity_affini2">Affini2Activity</string>
     <string name="title_activity_frame_animation">FrameAnimationActivity</string>
+    <string name="title_activity_guidence">GuidenceActivity</string>
+    <string name="title_activity_swipe_finish">SwipeFinishActivity</string>
+    <string name="title_activity_swipe_finish_father">SwipeFinishFatherActivity</string>
 </resources>
