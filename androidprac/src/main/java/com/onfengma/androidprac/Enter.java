@@ -11,7 +11,8 @@ public enum Enter {
     TaskAffiniActivity(TaskAffiniActivity.class),
     FrameAnimationActivity(FrameAnimationActivity.class),
     GuidenceActivity(GuidenceActivity.class),
-    SwipeFinishFatherActivity(SwipeFinishFatherActivity.class);
+    SwipeFinishFatherActivity(SwipeFinishFatherActivity.class),
+    VolleyDemoActivity(VolleyDemoActivity_.class);
 
     private Class clazz;
 

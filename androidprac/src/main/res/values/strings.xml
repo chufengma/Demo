@@ -14,4 +14,6 @@
     <string name="title_activity_guidence">GuidenceActivity</string>
     <string name="title_activity_swipe_finish">SwipeFinishActivity</string>
     <string name="title_activity_swipe_finish_father">SwipeFinishFatherActivity</string>
+    <string name="title_activity_vollay_demo">VollayDemoActivity</string>
+
 </resources>
