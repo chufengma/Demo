@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.onfengma.androidprac.VolleyDemoActivity">
+
+    <Button
+        android:id="@+id/jsonBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="点击加载JSON数据" />
+
+    <Button
+        android:id="@+id/imageBtn"
+        android:layout_below="@id/jsonBtn"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="点击加载Image" />
+
+    <Button
+        android:id="@+id/stringBtn"
+        android:layout_below="@id/imageBtn"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="点击加载String"/>
+
+    <Button
+        android:id="@+id/customBtn"
+        android:layout_below="@id/stringBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击加载自定义数据"/>
+
+    <TextView
+        android:id="@+id/textHolder"
+        android:layout_below="@id/customBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageHolder"
+        android:layout_below="@id/customBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
