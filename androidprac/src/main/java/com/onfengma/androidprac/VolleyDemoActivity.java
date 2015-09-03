@@ -1,8 +1,8 @@
 package com.onfengma.androidprac;
 
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -17,7 +17,7 @@ import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.onfengma.androidprac.Config.Constant;
-import com.onfengma.androidprac.Config.VolleyUtils;
+import com.onfengma.androidprac.network.VolleyHelper;
 import com.onfengma.androidprac.utils.Logger;
 
 import org.androidannotations.annotations.Click;
@@ -27,8 +27,6 @@ import org.json.JSONObject;
 
 @EActivity(R.layout.activity_vollay_demo)
 public class VolleyDemoActivity extends AppCompatActivity {
-
-
 
     @ViewById
     Button jsonBtn;
@@ -48,7 +46,7 @@ public class VolleyDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        queue = VolleyUtils.getInstance(this).getRequestQueue();
+        queue = VolleyHelper.getInstance(this).getRequestQueue();
     }
 
     @Click
