@@ -15,6 +15,9 @@ public enum Enter {
     VolleyDemoActivity(VolleyDemoActivity_.class),
     OkHttpClientActivity(OkHttpClientActivity.class),
     DrawerLayoutActivity(DrawerLayoutActivity.class);
+    MVPDemoActivity(MVPDemoActivity.class),
+    OnTouchEventDemoActivity(OnTouchEventDemoActivity.class),
+    AllDrawableDemoActivity(AllDrawableDemoActivity.class);
 
     private Class clazz;
 

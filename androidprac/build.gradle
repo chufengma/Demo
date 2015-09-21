@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
-def AAVersion = '3.3.2'
+apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 22
@@ -35,20 +34,18 @@ dependencies {
     compile 'com.facebook.stetho:stetho-okhttp:1.1.1'
     compile 'com.facebook.stetho:stetho-urlconnection:1.1.1'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
-    apt "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
 }
 
-apt {
-    arguments {
-        androidManifestFile variant.outputs[0].processResources.manifestFile
-        // if you have multiple outputs (when using splits), you may want to have other index than 0
-
-        // you should set your package name here if you are using different application IDs
-        // resourcePackageName "your.package.name"
-
-        // You can set optional annotation processing options here, like these commented options:
-        // logLevel 'INFO'
-        // logFile '/var/log/aa.log'
-    }
-}
+//apt {
+//    arguments {
+//        androidManifestFile variant.outputs[0].processResources.manifestFile
+//        // if you have multiple outputs (when using splits), you may want to have other index than 0
+//
+//        // you should set your package name here if you are using different application IDs
+//        // resourcePackageName "your.package.name"
+//
+//        // You can set optional annotation processing options here, like these commented options:
+//        // logLevel 'INFO'
+//        // logFile '/var/log/aa.log'
+//    }
+//}

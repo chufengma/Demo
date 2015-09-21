@@ -16,6 +16,9 @@
     <string name="title_activity_swipe_finish_father">SwipeFinishFatherActivity</string>
     <string name="title_activity_vollay_demo">VollayDemoActivity</string>
     <string name="title_activity_ok_http_client">OkHttpClientActivity</string>
+    <string name="title_activity_fragment_test">FragmentTestActivity</string>
+    <string name="title_activity_mvpdemo">MVPDemoActivity</string>
+    <string name="title_activity_on_touch_event_demo">OnTouchEventDemoActivity</string>
+    <string name="title_activity_all_drawable_demo">AllDrawableDemoActivity</string>
     <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
-
 </resources>
