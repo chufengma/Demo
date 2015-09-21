@@ -15,7 +15,9 @@ public enum Enter {
     GuidenceActivity(GuidenceActivity.class),
     SwipeFinishFatherActivity(SwipeFinishFatherActivity.class),
     OkHttpClientActivity(OkHttpClientActivity.class),
-    MVPDemoActivity(MVPDemoActivity.class);
+    MVPDemoActivity(MVPDemoActivity.class),
+    OnTouchEventDemoActivity(OnTouchEventDemoActivity.class),
+    AllDrawableDemoActivity(AllDrawableDemoActivity.class);
 
     private Class clazz;
 

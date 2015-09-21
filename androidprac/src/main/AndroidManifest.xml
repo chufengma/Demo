@@ -76,7 +76,13 @@
             android:label="@string/title_activity_fragment_test" />
         <activity
             android:name=".MVP.MVPDemoActivity"
-            android:label="@string/title_activity_mvpdemo"></activity>
+            android:label="@string/title_activity_mvpdemo" />
+        <activity
+            android:name=".OnTouchEventDemoActivity"
+            android:label="@string/title_activity_on_touch_event_demo" />
+        <activity
+            android:name=".AllDrawableDemoActivity"
+            android:label="@string/title_activity_all_drawable_demo"></activity>
     </application>
 
 </manifest>
