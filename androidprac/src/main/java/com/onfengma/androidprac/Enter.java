@@ -13,7 +13,8 @@ public enum Enter {
     GuidenceActivity(GuidenceActivity.class),
     SwipeFinishFatherActivity(SwipeFinishFatherActivity.class),
     VolleyDemoActivity(VolleyDemoActivity_.class),
-    OkHttpClientActivity(OkHttpClientActivity.class);
+    OkHttpClientActivity(OkHttpClientActivity.class),
+    DrawerLayoutActivity(DrawerLayoutActivity.class);
 
     private Class clazz;
 
