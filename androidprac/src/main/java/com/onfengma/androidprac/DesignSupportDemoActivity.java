@@ -1,16 +1,33 @@
 package com.onfengma.androidprac;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import java.util.Random;
 
 public class DesignSupportDemoActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private LinearLayoutManager linearLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_design_support_demo);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     }
 
     @Override
@@ -33,5 +50,42 @@ public class DesignSupportDemoActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.ViewHolder> {
+
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+            CardView cardView = (CardView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_layout, viewGroup, false);
+            cardView.setRadius(13);
+            cardView.setCardElevation(20);
+            ViewHolder viewHolder = new ViewHolder(cardView);
+            return viewHolder;
+        }
+
+        @Override
+        public void onBindViewHolder(ViewHolder viewHolder, int i) {
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) viewHolder.imageView.getLayoutParams();
+            lp.height = new Random().nextInt(getResources().getDisplayMetrics().widthPixels / 2);
+            viewHolder.imageView.setLayoutParams(lp);
+        }
+
+        @Override
+        public int getItemCount() {
+            return 14;
+        }
+
+        class ViewHolder extends RecyclerView.ViewHolder {
+
+            ImageView imageView;
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+                imageView = (ImageView) itemView.findViewById(R.id.image);
+            }
+
+        }
+
     }
 }

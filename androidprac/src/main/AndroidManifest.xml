@@ -93,6 +93,7 @@
             android:label="@string/title_activity_material_demo" />
         <activity
             android:name=".DesignSupportDemoActivity"
+            android:theme="@style/NoActionBar"
             android:label="@string/title_activity_design_support_demo"></activity>
     </application>
 
