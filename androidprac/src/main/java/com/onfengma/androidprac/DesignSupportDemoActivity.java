@@ -1,17 +1,10 @@
 package com.onfengma.androidprac;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,44 +15,25 @@ import android.widget.LinearLayout;
 
 import java.util.Random;
 
-public class RecycleVIewActivity extends AppCompatActivity {
+public class DesignSupportDemoActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    LinearLayoutManager linearLayoutManager;
-    ColorDrawable toolBarColor;
+    private RecyclerView recyclerView;
+    private LinearLayoutManager linearLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycle_view);
-//        recyclerView = (RecyclerView) findViewById(R.id.recycler);
-//        linearLayoutManager = new LinearLayoutManager(this);
-//        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-//
-//
-//        recyclerView.setLayoutManager(linearLayoutManager);
-//        recyclerView.setAdapter(new DemoAdapter());
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        setContentView(R.layout.activity_design_support_demo);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        toolBarColor = new ColorDrawable(Color.TRANSPARENT);
-        getSupportActionBar().setBackgroundDrawable(toolBarColor);
-
-        RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recycler2);
-        recyclerView2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView2.setAdapter(new DemoAdapter());
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.pic);
-        Palette palette = Palette.from(bitmap).generate();
-        getSupportActionBar().setBackgroundDrawable(toolBarColor);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_recycle_view, menu);
+        getMenuInflater().inflate(R.menu.menu_design_support_demo, menu);
         return true;
     }
 

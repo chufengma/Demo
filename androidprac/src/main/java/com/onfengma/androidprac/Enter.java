@@ -18,7 +18,10 @@ public enum Enter {
     DrawerLayoutActivity(DrawerLayoutActivity.class),
     MVPDemoActivity(MVPDemoActivity.class),
     OnTouchEventDemoActivity(OnTouchEventDemoActivity.class),
-    AllDrawableDemoActivity(AllDrawableDemoActivity.class);
+    AllDrawableDemoActivity(AllDrawableDemoActivity.class),
+    MaterialDemoActivity(MaterialDemoActivity.class),
+    DesignSupportDemoActivity(DesignSupportDemoActivity.class),
+    ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;
 
