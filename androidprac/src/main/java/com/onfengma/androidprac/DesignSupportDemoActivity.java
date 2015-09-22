@@ -1,10 +1,15 @@
 package com.onfengma.androidprac;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.onfengma.androidprac.utils.Logger;
 
 import java.util.Random;
 
@@ -28,6 +35,32 @@ public class DesignSupportDemoActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(new DemoAdapter());
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        final CollapsingToolbarLayout toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        toolbarLayout.setTitle(getTitle());
+
+        final ColorDrawable colorDrawable = new ColorDrawable(getResources().getColor(R.color.dialog_bg));
+
+        // getSupportActionBar().setBackgroundDrawable(colorDrawable);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
+                float rate = (float)i / (float)appBarLayout.getHeight();
+                rate = Math.abs(rate);
+                colorDrawable.setAlpha((int) (rate * 256));
+                Logger.i("i:" + i + ":" + appBarLayout.getHeight() + ":" + rate);
+                toolbarLayout.setBackground(colorDrawable);
+                appBarLayout.setBackground(colorDrawable);
+            }
+        });
     }
 
     @Override
