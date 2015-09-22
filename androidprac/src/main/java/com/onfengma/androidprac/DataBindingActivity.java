@@ -1,13 +1,11 @@
 package com.onfengma.androidprac;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.onfengma.androidprac.databinding.ActivityDataBindingBinding;
 
 public class DataBindingActivity extends AppCompatActivity {
 
@@ -17,15 +15,15 @@ public class DataBindingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_binding);
-        ActivityDataBindingBinding activityDataBindingBinding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
-        user.setAge(12);
-        user.setName("chufengma");
-        activityDataBindingBinding.setUser(user);
+//        ActivityDataBindingBinding activityDataBindingBinding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+//        user.setAge(12);
+//        user.setName("chufengma");
+//        activityDataBindingBinding.setUser(user);
     }
 
     public void onClick(View view) {
-        user.setName("fengma is greate");
-        user.setAge(123);
+//        user.setName("fengma is greate");
+//        user.setAge(123);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.onfengma.androidprac;
 
+import com.onfengma.androidprac.MVP.MVPDemoActivity;
+
 /**
  * Created by chufengma on 15/8/2.
  */
@@ -12,9 +14,8 @@ public enum Enter {
     FrameAnimationActivity(FrameAnimationActivity.class),
     GuidenceActivity(GuidenceActivity.class),
     SwipeFinishFatherActivity(SwipeFinishFatherActivity.class),
-    VolleyDemoActivity(VolleyDemoActivity_.class),
     OkHttpClientActivity(OkHttpClientActivity.class),
-    DrawerLayoutActivity(DrawerLayoutActivity.class);
+    DrawerLayoutActivity(DrawerLayoutActivity.class),
     MVPDemoActivity(MVPDemoActivity.class),
     OnTouchEventDemoActivity(OnTouchEventDemoActivity.class),
     AllDrawableDemoActivity(AllDrawableDemoActivity.class);
