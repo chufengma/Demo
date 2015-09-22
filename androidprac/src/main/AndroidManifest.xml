@@ -32,7 +32,8 @@
             android:label="@string/title_activity_swipe_refresh" />
         <activity
             android:name=".RecycleVIewActivity"
-            android:label="@string/title_activity_recycle_view" />
+            android:label="@string/title_activity_recycle_view"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".TaskAffiniActivity"
             android:label="@string/title_activity_task_affini" />
@@ -82,7 +83,17 @@
             android:label="@string/title_activity_on_touch_event_demo" />
         <activity
             android:name=".AllDrawableDemoActivity"
-            android:label="@string/title_activity_all_drawable_demo"></activity>
+            android:label="@string/title_activity_all_drawable_demo" />
+        <activity
+            android:name=".ManagerSystemUIActivity"
+            android:label="@string/title_activity_manager_system_ui"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name=".MaterialDemoActivity"
+            android:label="@string/title_activity_material_demo" />
+        <activity
+            android:name=".DesignSupportDemoActivity"
+            android:label="@string/title_activity_design_support_demo"></activity>
     </application>
 
 </manifest>

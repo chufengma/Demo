@@ -20,5 +20,8 @@
     <string name="title_activity_mvpdemo">MVPDemoActivity</string>
     <string name="title_activity_on_touch_event_demo">OnTouchEventDemoActivity</string>
     <string name="title_activity_all_drawable_demo">AllDrawableDemoActivity</string>
+    <string name="title_activity_manager_system_ui">ManagerSystemUIActivity</string>
+    <string name="title_activity_material_demo">MaterialDemoActivity</string>
+    <string name="title_activity_design_support_demo">DesignSupportDemoActivity</string>
 
 </resources>

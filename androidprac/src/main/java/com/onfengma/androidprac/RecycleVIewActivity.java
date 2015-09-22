@@ -4,42 +4,56 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import java.util.Random;
 
 public class RecycleVIewActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
+    ColorDrawable toolBarColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
-        linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(new DemoAdapter());
+//        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+//        linearLayoutManager = new LinearLayoutManager(this);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+//
+//
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        recyclerView.setAdapter(new DemoAdapter());
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        toolBarColor = new ColorDrawable(Color.TRANSPARENT);
+        getSupportActionBar().setBackgroundDrawable(toolBarColor);
 
         RecyclerView recyclerView2 = (RecyclerView) findViewById(R.id.recycler2);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         recyclerView2.setAdapter(new DemoAdapter());
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.pic);
         Palette palette = Palette.from(bitmap).generate();
-        ColorDrawable colorDrawable = new ColorDrawable();
-        colorDrawable.setColor(palette.getMutedColor(Color.GREEN));
-        getSupportActionBar().setBackgroundDrawable(colorDrawable);
+        getSupportActionBar().setBackgroundDrawable(toolBarColor);
     }
 
     @Override
@@ -71,14 +85,16 @@ public class RecycleVIewActivity extends AppCompatActivity {
         public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             CardView cardView = (CardView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_layout, viewGroup, false);
             cardView.setRadius(13);
-            cardView.setCardElevation(80);
+            cardView.setCardElevation(20);
             ViewHolder viewHolder = new ViewHolder(cardView);
             return viewHolder;
         }
 
         @Override
         public void onBindViewHolder(ViewHolder viewHolder, int i) {
-
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) viewHolder.imageView.getLayoutParams();
+            lp.height = new Random().nextInt(getResources().getDisplayMetrics().widthPixels / 2);
+            viewHolder.imageView.setLayoutParams(lp);
         }
 
         @Override
@@ -88,9 +104,13 @@ public class RecycleVIewActivity extends AppCompatActivity {
 
         class ViewHolder extends RecyclerView.ViewHolder {
 
+            ImageView imageView;
+
             public ViewHolder(View itemView) {
                 super(itemView);
+                imageView = (ImageView) itemView.findViewById(R.id.image);
             }
+
         }
 
     }
