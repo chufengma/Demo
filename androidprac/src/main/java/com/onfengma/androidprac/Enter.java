@@ -21,6 +21,8 @@ public enum Enter {
     AllDrawableDemoActivity(AllDrawableDemoActivity.class),
     MaterialDemoActivity(MaterialDemoActivity.class),
     DesignSupportDemoActivity(DesignSupportDemoActivity.class),
+    ThemeAndStyleDemoActivity(ThemeAndStyleDemoActivity.class),
+    StorageDemoActivity(StorageDemoActivity.class),
     ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;

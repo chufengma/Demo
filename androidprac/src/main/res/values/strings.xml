@@ -25,4 +25,6 @@
     <string name="title_activity_design_support_demo">DesignSupportDemoActivity</string>
 
     <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
+    <string name="title_activity_theme_and_style_demo">ThemeAndStyleDemoActivity</string>
+    <string name="title_activity_storage_demo">StorageDemoActivity</string>
 </resources>

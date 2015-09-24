@@ -61,6 +61,7 @@ public class DesignSupportDemoActivity extends AppCompatActivity {
                 appBarLayout.setBackground(colorDrawable);
             }
         });
+
     }
 
     @Override
