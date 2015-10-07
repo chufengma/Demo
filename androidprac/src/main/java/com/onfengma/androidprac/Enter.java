@@ -23,6 +23,7 @@ public enum Enter {
     DesignSupportDemoActivity(DesignSupportDemoActivity.class),
     ThemeAndStyleDemoActivity(ThemeAndStyleDemoActivity.class),
     StorageDemoActivity(StorageDemoActivity.class),
+    ShareDemoActivity(ShareDemoActivity.class),
     ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;

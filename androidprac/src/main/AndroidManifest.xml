@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.onfengma.androidprac">
+    package="com.onfengma.androidprac" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".DataBindingActivity"
             android:label="@string/title_activity_data_binding" />
@@ -20,7 +20,7 @@
             android:label="@string/hello_world" />
         <activity
             android:name=".EnterActivity"
-            android:label="@string/title_activity_enter">
+            android:label="@string/title_activity_enter" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -105,7 +105,12 @@
             android:theme="@style/AppTheme.Wrapper" />
         <activity
             android:name=".StorageDemoActivity"
-            android:label="@string/title_activity_storage_demo"></activity>
+            android:label="@string/title_activity_storage_demo" />
+        <activity
+            android:name=".ShareDemoActivity"
+            android:label="@string/title_activity_share_demo"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>
