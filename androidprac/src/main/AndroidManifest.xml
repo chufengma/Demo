@@ -3,8 +3,24 @@
     package="com.onfengma.androidprac" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".MainApplication"
@@ -110,6 +126,35 @@
             android:name=".ShareDemoActivity"
             android:label="@string/title_activity_share_demo"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SceneDemoActivity"
+            android:label="@string/title_activity_scene_demo"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".VideoDemoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".PlayVideoActivity" >
+        </activity>
+        <activity android:name=".Video2Activity" >
+        </activity>
+        <activity android:name=".MeterialAnimActivity" >
+        </activity>
+        <activity android:name=".RecyclerViewActivity" >
+        </activity>
+        <activity android:name=".ItemDetailActivity" >
+        </activity>
+        <activity android:name=".ViewTestActivity" >
+        </activity>
+        <activity
+            android:name=".SoftInpuActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity android:name=".TabLayoutDemoActivity" >
+        </activity>
+        <activity android:name=".WebViewDemoActivity" >
         </activity>
     </application>
 

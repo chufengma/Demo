@@ -28,4 +28,13 @@
     <string name="title_activity_theme_and_style_demo">ThemeAndStyleDemoActivity</string>
     <string name="title_activity_storage_demo">StorageDemoActivity</string>
     <string name="title_activity_share_demo">ShareDemoActivity</string>
+    <string name="title_activity_scene_demo">SceneDemoActivity</string>
+
+
+    <!-- XListView -->
+    <string name="xlist_view_hint_loading">正在加载</string>
+    <string name="xlist_view_footer_hint_normal">点击查看更多</string>
+    <string name="xlist_view_footer_hint_ready">松开载入更多</string>
+    <string name="xlist_view_footer_hint_loading">正在加载更多</string>
+
 </resources>

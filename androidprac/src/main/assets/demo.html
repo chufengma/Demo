@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+		function openDialogSuccess(str) {
+			Lady.showToast(str);
+		}
+
+		function openDialogError(res) {
+		}
+
+    </script>
+</head>
+<body>
+<h3>接口说明文档</h3>
+
+<input type="button" value="打开对话框" onclick="Lady.showDialog('openDialogError')">
+
+</body>
+</html>

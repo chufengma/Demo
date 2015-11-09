@@ -38,6 +38,7 @@ dependencies {
     compile 'com.facebook.stetho:stetho-okhttp:1.1.1'
     compile 'com.facebook.stetho:stetho-urlconnection:1.1.1'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+    compile 'com.android.support:gridlayout-v7:23.1.0'
 }
 
 //apt {

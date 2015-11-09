@@ -2,7 +2,6 @@ package com.onfengma.androidprac;
 
 import android.app.Dialog;
 import android.graphics.Rect;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -10,22 +9,47 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.onfengma.androidprac.views.PresentPopupWindow;
 
-public class WindowActivity extends AppCompatActivity implements View.OnClickListener{
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
+public class WindowActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView textView;
+    @Bind(R.id.text2)
+    Button text2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = (TextView) findViewById(R.id.text);
-        textView.setOnClickListener(this);
+        ButterKnife.bind(this);
+//        textView = (TextView) findViewById(R.id.text);
+//        textView.setOnClickListener(this);
+//
+//        View view = new View(this);
+//        view.setBackgroundColor(Color.BLUE);
+//
+//        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams(WindowManager.LayoutParams.TYPE_TOAST);
+//        layoutParams.height = 400;
+//        layoutParams.width = 400;
+//        layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE;
+//        getWindowManager().addView(view, layoutParams);
     }
 
-    private int getStatusBarHeight(){
+    @OnClick(R.id.text2)
+    public void clickShowDialog() {
+        PresentPopupWindow window = new PresentPopupWindow(this);
+        window.show();
+    }
+
+    private int getStatusBarHeight() {
         Rect rect = new Rect();
         getWindow().getDecorView().getWindowVisibleDisplayFrame(rect);
         return rect.top;
@@ -73,5 +97,10 @@ public class WindowActivity extends AppCompatActivity implements View.OnClickLis
 //        dialog.getWindow().getDecorView().setPadding(0,0,0,0);
         dialog.getWindow().setAttributes(layoutParams);
         dialog.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

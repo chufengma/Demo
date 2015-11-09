@@ -24,6 +24,14 @@ public enum Enter {
     ThemeAndStyleDemoActivity(ThemeAndStyleDemoActivity.class),
     StorageDemoActivity(StorageDemoActivity.class),
     ShareDemoActivity(ShareDemoActivity.class),
+    SceneDemoActivity(SceneDemoActivity.class),
+    VideoDemoActivity(VideoDemoActivity.class),
+    PlayVideoActivity(PlayVideoActivity.class),
+    MeterialAnimActivity(MeterialAnimActivity.class),
+    SoftInputActivity(SoftInpuActivity.class),
+    ViewTestActivity(ViewTestActivity.class),
+    TabLayoutDemoActivity(TabLayoutDemoActivity.class),
+    WebViewDemoActivity(WebViewDemoActivity.class),
     ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;

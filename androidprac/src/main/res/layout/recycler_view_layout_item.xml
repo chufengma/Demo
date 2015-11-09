@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/header"
+        android:background="@color/dialog_bg"
+        android:transitionName="trans_header"
+        android:layout_width="60dip"
+        android:layout_height="60dip"/>
+
+    <TextView
+        android:padding="5dip"
+        android:id="@+id/text"
+        android:gravity="center_vertical"
+        android:transitionName="trans_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

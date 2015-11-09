@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.onfengma.androidprac.WebViewDemoActivity">
+
+    <!--<com.onfengma.androidprac.views.SwipeRefreshLayout-->
+        <!--android:id="@+id/refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<com.onfengma.androidprac.views.SwipeHeaderView-->
+            <!--android:id="@+id/swipe_header"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/swipe_footer"-->
+            <!--android:text="DEMO DEMO2"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<WebView-->
+            <!--android:id="@+id/web"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</com.onfengma.androidprac.views.SwipeRefreshLayout>-->
+
+    <com.onfengma.androidprac.views.listview.XListView
+        android:id="@+id/list"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

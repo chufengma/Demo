@@ -5,4 +5,6 @@
     <color name="status_bar">#812E7D32</color>
     <color name="black">#000000</color>
     <color name="black_1">#2e0721</color>
+
+    <color name="blue">#00b4d4</color>
 </resources>
