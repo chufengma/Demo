@@ -156,6 +156,20 @@
         </activity>
         <activity android:name=".WebViewDemoActivity" >
         </activity>
+        <activity android:name=".IPCDemoActivity" >
+        </activity>
+
+        <service
+            android:name=".service.MessagerService"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name=".service.AIDLService"
+            android:process=":remote2" >
+        </service>
+
+        <activity android:name=".DrawableDemoActivity" >
+        </activity>
     </application>
 
 </manifest>

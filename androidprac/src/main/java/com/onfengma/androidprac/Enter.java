@@ -32,6 +32,8 @@ public enum Enter {
     ViewTestActivity(ViewTestActivity.class),
     TabLayoutDemoActivity(TabLayoutDemoActivity.class),
     WebViewDemoActivity(WebViewDemoActivity.class),
+    IPCDemoActivity(IPCDemoActivity.class),
+    DrawableDemoActivity(DrawableDemoActivity.class),
     ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;

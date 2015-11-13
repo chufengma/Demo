@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@color/red"
+        android:maxLevel="10"
+        android:minLevel="5" />
+    <item
+        android:drawable="@color/blue"
+        android:maxLevel="9"
+        android:minLevel="0" />
+    <item
+        android:drawable="@color/green"
+        android:maxLevel="15"
+        android:minLevel="11" />
+</level-list>
