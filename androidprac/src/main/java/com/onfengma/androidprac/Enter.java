@@ -34,6 +34,7 @@ public enum Enter {
     WebViewDemoActivity(WebViewDemoActivity.class),
     IPCDemoActivity(IPCDemoActivity.class),
     DrawableDemoActivity(DrawableDemoActivity.class),
+    ViewPagerDemoActivity(ViewPagerDemoActivity.class),
     ManagerSystemUiActivity(ManagerSystemUIActivity.class);
 
     private Class clazz;

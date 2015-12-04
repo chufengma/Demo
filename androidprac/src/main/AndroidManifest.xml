@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.onfengma.androidprac" >
+    package="com.onfengma.androidprac">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -27,7 +27,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".DataBindingActivity"
             android:label="@string/title_activity_data_binding" />
@@ -36,7 +36,7 @@
             android:label="@string/hello_world" />
         <activity
             android:name=".EnterActivity"
-            android:label="@string/title_activity_enter" >
+            android:label="@string/title_activity_enter">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -125,51 +125,36 @@
         <activity
             android:name=".ShareDemoActivity"
             android:label="@string/title_activity_share_demo"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".SceneDemoActivity"
             android:label="@string/title_activity_scene_demo"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".VideoDemoActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name=".PlayVideoActivity" >
-        </activity>
-        <activity android:name=".Video2Activity" >
-        </activity>
-        <activity android:name=".MeterialAnimActivity" >
-        </activity>
-        <activity android:name=".RecyclerViewActivity" >
-        </activity>
-        <activity android:name=".ItemDetailActivity" >
-        </activity>
-        <activity android:name=".ViewTestActivity" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PlayVideoActivity"></activity>
+        <activity android:name=".Video2Activity"></activity>
+        <activity android:name=".MeterialAnimActivity"></activity>
+        <activity android:name=".RecyclerViewActivity"></activity>
+        <activity android:name=".ItemDetailActivity"></activity>
+        <activity android:name=".ViewTestActivity"></activity>
         <activity
             android:name=".SoftInpuActivity"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-        <activity android:name=".TabLayoutDemoActivity" >
-        </activity>
-        <activity android:name=".WebViewDemoActivity" >
-        </activity>
-        <activity android:name=".IPCDemoActivity" >
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity android:name=".TabLayoutDemoActivity"></activity>
+        <activity android:name=".WebViewDemoActivity"></activity>
+        <activity android:name=".IPCDemoActivity"></activity>
 
         <service
             android:name=".service.MessagerService"
-            android:process=":remote" >
-        </service>
+            android:process=":remote"></service>
         <service
             android:name=".service.AIDLService"
-            android:process=":remote2" >
-        </service>
+            android:process=":remote2"></service>
 
-        <activity android:name=".DrawableDemoActivity" >
-        </activity>
+        <activity android:name=".DrawableDemoActivity"></activity>
+        <activity android:name=".ViewPagerDemoActivity"></activity>
     </application>
 
 </manifest>
