@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.facebook.stetho.common.android.ViewUtil;
 
@@ -25,7 +27,7 @@ public class ViewPagerDemoActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         viewPager.setAdapter(new DemoPagerAdapter());
-        viewPager.setPageMargin(- 240);
+        viewPager.setPageMargin(-240);
         viewPager.setOffscreenPageLimit(5);
         viewPager.setPageTransformer(false, new DemoTrans());
     }
@@ -44,10 +46,17 @@ public class ViewPagerDemoActivity extends AppCompatActivity {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
+            FrameLayout parent = new FrameLayout(container.getContext());
+            FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            lp.leftMargin = 135;
+            lp.rightMargin = 135;
             View v = LayoutInflater.from(ViewPagerDemoActivity.this).inflate(R.layout.view_pager_demo, null);
-            container.addView(v);
-            v.requestLayout();
-            return v;
+            v.setLayoutParams(lp);
+            parent.addView(v);
+            container.addView(parent);
+            ((TextView)v.findViewById(R.id.num)).setText(position + "");
+
+            return parent;
         }
 
         @Override
