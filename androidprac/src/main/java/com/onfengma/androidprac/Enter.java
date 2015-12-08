@@ -6,6 +6,7 @@ import com.onfengma.androidprac.MVP.MVPDemoActivity;
  * Created by chufengma on 15/8/2.
  */
 public enum Enter {
+    CoordinateActivity(CoordinateActivity.class),
     DataBindingActivity(DataBindingActivity.class),
     WindowActivity(WindowActivity.class),
     SwipeRefreshActivity(SwipeRefreshActivity.class),

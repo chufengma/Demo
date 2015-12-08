@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.onfengma.androidprac.CoordinateActivity">
+    <TextView
+        android:id="@+id/normal"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="#ff8989"
+        android:gravity="start"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/sacle"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="#008989"
+        android:gravity="start"
+        android:onClick="onClick"
+        android:scaleX="0.5"
+        android:transformPivotX="50dip"
+        android:transformPivotY="50dip"
+        android:scaleY="0.5"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/transition"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="#940000"
+        android:gravity="start"
+        android:onClick="onClick"
+        android:translationX="50dip"
+        android:translationY="50dip"
+        android:translationZ="50dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/rotate"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="#943fff"
+        android:gravity="start"
+        android:onClick="onClick"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/scroll"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:background="#11ffff"
+        android:gravity="start"
+        android:scrollX="100dip"
+        android:scrollY="100dip"
+        android:onClick="onClick"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyler"
+        android:layout_width="match_parent"
+        android:layout_height="50dip" />
+
+</LinearLayout>
