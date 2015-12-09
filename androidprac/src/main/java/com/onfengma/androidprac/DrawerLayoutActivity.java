@@ -6,6 +6,9 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
+import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPropertyAnimatorCompat;
+import android.support.v4.view.ViewPropertyAnimatorListenerAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,8 +19,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewAnimator;
 
@@ -59,7 +64,7 @@ public class DrawerLayoutActivity extends AppCompatActivity {
                 if (dy < 0) {
                     showToolBar();
                 }
-                if (dy > 0) {
+                if (((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstVisibleItemPosition() > 0 && dy > 0) {
                     hideToolBar();
                 }
             }
@@ -77,68 +82,72 @@ public class DrawerLayoutActivity extends AppCompatActivity {
         // drawerLayout.setStatusBarBackgroundColor(Color.TRANSPARENT);
     }
 
+    private ViewPropertyAnimatorCompat hideAnimator;
+    private ViewPropertyAnimatorCompat showAnimator;
+
     private void hideToolBar() {
-//        if (myAwesomeToolbar.getVisibility() == View.GONE) {
-//            return;
-//        }
-        AnimatorSet animatorSet = new AnimatorSet();
-        ObjectAnimator ani1 = ObjectAnimator.ofFloat(myAwesomeToolbar, "alpha", 1f, 0f).setDuration(500);
-        // ValueAnimator ani2 = ValueAnimator.ofInt(0, ViewUtils.dipToPixels(80, getResources().getDisplayMetrics()));
-//        ani2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-//            @Override
-//            public void onAnimationUpdate(ValueAnimator animation) {
-//                LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) myAwesomeToolbar.getLayoutParams();
-//                lp.topMargin = -1 * (int) animation.getAnimatedValue();
-//            }
-//        });
-//        ani1.addListener(new AnimatorListenerAdapter() {
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                super.onAnimationEnd(animation);
-//                myAwesomeToolbar.setVisibility(View.GONE);
-//            }
-//        });
-        animatorSet.play(ani1);
-        animatorSet.start();
+        if (myAwesomeToolbar.getAlpha() == 0f || hideAnimator != null) {
+            return;
+        }
+        hideAnimator = ViewCompat.animate(myAwesomeToolbar)
+                .translationY(-myAwesomeToolbar.getBottom())
+                .alpha(0)
+                .setDuration(300)
+                .setInterpolator(new DecelerateInterpolator()).setListener(new ViewPropertyAnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(View view) {
+                        hideAnimator = null;
+                    }
+                });
     }
 
     private void showToolBar() {
-//        if (myAwesomeToolbar.getVisibility() == View.VISIBLE) {
-//            return;
-//        }
-        AnimatorSet animatorSet = new AnimatorSet();
-        ObjectAnimator ani1 = ObjectAnimator.ofFloat(myAwesomeToolbar, "alpha", 0f, 1f).setDuration(500);
-//        ani1.addListener(new AnimatorListenerAdapter() {
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                super.onAnimationEnd(animation);
-//                myAwesomeToolbar.setVisibility(View.VISIBLE);
-//            }
-//        });
-        // ValueAnimator ani2 = ValueAnimator.ofInt(ViewUtils.dipToPixels(80, getResources().getDisplayMetrics()), 0);
-//        ani2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-//            @Override
-//            public void onAnimationUpdate(ValueAnimator animation) {
-//                LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) myAwesomeToolbar.getLayoutParams();
-//                lp.topMargin = -1 * (int) animation.getAnimatedValue();
-//            }
-//        });
-        animatorSet.play(ani1);
-        animatorSet.start();
+        if (myAwesomeToolbar.getAlpha() == 1f || showAnimator != null) {
+            return;
+        }
+        showAnimator = ViewCompat.animate(myAwesomeToolbar)
+                .translationY(0)
+                .alpha(1)
+                .setDuration(300)
+                .setInterpolator(new DecelerateInterpolator()).setListener(new ViewPropertyAnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(View view) {
+                        showAnimator = null;
+                    }
+                });
     }
 
 
     class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
+        private static final int TYPE_NORMAL = 1;
+        private static final int TYPE_HEADER = 2;
+
+        @Override
+        public int getItemViewType(int position) {
+            if (position == 0) {
+                return TYPE_HEADER;
+            }
+            return TYPE_NORMAL;
+        }
+
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.demo_recycler_item, parent, false);
             MyViewHolder holder = new MyViewHolder(view);
+            if (viewType == TYPE_HEADER) {
+                ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewUtils.dipToPixels(80, getResources().getDisplayMetrics()));
+                view.setLayoutParams(lp);
+            }
             return holder;
         }
 
         @Override
         public void onBindViewHolder(MyViewHolder holder, int position) {
+            if (position == 0) {
+                holder.imageView.setImageResource(0);
+                return;
+            }
             holder.imageView.setImageResource(position % 3 == 0 ? R.drawable.bg_1 : position % 2 == 0 ? R.drawable.bg_2 : R.drawable.bg_3);
         }
 

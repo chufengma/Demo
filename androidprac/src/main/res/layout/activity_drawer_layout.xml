@@ -7,12 +7,18 @@
     tools:context="com.onfengma.androidprac.DrawerLayoutActivity"
     android:layout_height="match_parent">
     <!-- The main content view -->
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/content_frame"
         android:background="#f0f0f0"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/my_awesome_toolbar"
@@ -22,12 +28,7 @@
             android:paddingTop="24dip"
             android:background="@color/dialog_bg" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
+    </RelativeLayout>
     <!-- The navigation drawer -->
     <ListView
         android:id="@+id/left_drawer"
