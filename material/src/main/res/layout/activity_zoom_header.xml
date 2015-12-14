@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.onfengma.material.ZoomHeaderActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:src="@drawable/header"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="300dip" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:scrollY="110dip"
+            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_marginTop="300dip"
+                    android:text="@string/panty"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+        </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
