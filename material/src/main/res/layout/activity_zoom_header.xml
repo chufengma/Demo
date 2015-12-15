@@ -7,23 +7,24 @@
 
     <ImageView
         android:id="@+id/header"
-        android:src="@drawable/header"
-        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="300dip" />
+        android:layout_height="300dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
 
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/scroll"
+    <com.onfengma.material.view.MyScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollY="110dip">
+
+        <TextView
+            android:id="@+id/text"
             android:layout_width="match_parent"
-            android:scrollY="110dip"
-            android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_marginTop="300dip"
-                    android:text="@string/panty"
-                    android:background="@android:color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-        </android.support.v4.widget.NestedScrollView>
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dip"
+            android:background="@android:color/white"
+            android:text="@string/panty" />
+    </com.onfengma.material.view.MyScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
