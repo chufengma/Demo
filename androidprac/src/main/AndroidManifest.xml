@@ -155,7 +155,10 @@
 
         <activity android:name=".DrawableDemoActivity" />
         <activity android:name=".ViewPagerDemoActivity" />
-        <activity android:name=".CoordinateActivity"></activity>
+        <activity android:name=".CoordinateActivity" />
+        <activity android:name=".HealthActivity" />
+        <activity android:name=".SpannableDemoActivity" />
+        <activity android:name=".ScrollerActivity"></activity>
     </application>
 
 </manifest>

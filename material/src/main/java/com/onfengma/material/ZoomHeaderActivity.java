@@ -1,22 +1,22 @@
 package com.onfengma.material;
 
+import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.onfengma.material.view.MyScrollView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ZoomHeaderActivity extends AppCompatActivity implements NestedScrollView.OnScrollChangeListener,View.OnTouchListener {
+public class ZoomHeaderActivity extends AppCompatActivity implements NestedScrollView.OnScrollChangeListener, View.OnTouchListener {
 
     @Bind(R.id.header)
     ImageView header;
@@ -24,6 +24,8 @@ public class ZoomHeaderActivity extends AppCompatActivity implements NestedScrol
     TextView textView;
     @Bind(R.id.scroll)
     MyScrollView scrollView;
+    @Bind(R.id.btn)
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class ZoomHeaderActivity extends AppCompatActivity implements NestedScrol
         }, 1000);
 
         scrollView.setOnTouchListener(this);
+
+        btn.offsetTopAndBottom(ViewUtils.dipToPixels(300, getResources().getDisplayMetrics()));
     }
 
     float position = -1;
@@ -78,7 +82,7 @@ public class ZoomHeaderActivity extends AppCompatActivity implements NestedScrol
 
                 float distance = (event.getRawY() - lastPosition) * 0.2f;
                 scrollView.setTranslationY(scrollView.getTranslationY() + distance);
-                float scale = 1.0f + (scrollView.getTranslationY() - initTransY) / (float)getResources().getDisplayMetrics().heightPixels;
+                float scale = 1.0f + (scrollView.getTranslationY() - initTransY) / (float) getResources().getDisplayMetrics().heightPixels;
                 if (scale <= 1.0f) {
                     scale = 1.0f;
                 }

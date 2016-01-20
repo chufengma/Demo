@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.onfengma.androidprac.ScrollerActivity">
+
+    <com.onfengma.androidprac.views.ScrollDemoLayout
+        android:layout_width="match_parent"
+        android:id="@+id/scroll_layout"
+        android:orientation="vertical"
+        android:layout_height="match_parent" >
+        <TextView
+            android:text="1"
+            android:layout_width="match_parent"
+            android:background="#00cc00"
+            android:clickable="true"
+            android:layout_height="400dip" />
+
+        <TextView
+            android:text="6"
+            android:layout_width="match_parent"
+            android:background="#722222"
+            android:clickable="true"
+            android:layout_height="400dip" />
+
+        <TextView
+            android:text="5"
+            android:background="#777777"
+            android:layout_width="match_parent"
+            android:layout_height="400dip" />
+
+        <TextView
+            android:text="4"
+            android:background="#e77777"
+            android:layout_width="match_parent"
+            android:layout_height="400dip" />
+        <TextView
+            android:text="3"
+            android:background="#e77777"
+            android:layout_width="match_parent"
+            android:layout_height="400dip" />
+        <TextView
+            android:text="2"
+            android:background="#108a60"
+            android:layout_width="match_parent"
+            android:layout_height="400dip" />
+    </com.onfengma.androidprac.views.ScrollDemoLayout>
+
+</RelativeLayout>
