@@ -5,11 +5,12 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-alpha3'
-        // classpath "com.android.databinding:dataBinder:1.0-rc1"
+        classpath 'com.android.tools.build:gradle:2.1.0-alpha2'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
-}
 
+
+}
 allprojects {
     repositories {
         jcenter()

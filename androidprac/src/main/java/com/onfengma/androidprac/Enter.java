@@ -6,6 +6,7 @@ import com.onfengma.androidprac.MVP.MVPDemoActivity;
  * Created by chufengma on 15/8/2.
  */
 public enum Enter {
+    SwipeShowActivity(SwipeShowActivity.class),
     ScrollerActivity(ScrollerActivity.class),
     SpannableDemoActivity(SpannableDemoActivity.class),
     HealthActivity(HealthActivity.class),

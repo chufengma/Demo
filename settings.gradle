@@ -1,1 +1,2 @@
-include ':batter', ':androidprac', ':vedio', ':material'
+include ':androidprac'
+//, ':vedio', ':material', ':sdk', ':eventbus'

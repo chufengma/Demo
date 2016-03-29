@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5f000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/red"
+        android:id="@+id/container"
+        android:translationY="-250dip"
+        android:layout_width="match_parent"
+        android:layout_height="250dip">
+    </RelativeLayout>
+
+
+</FrameLayout>

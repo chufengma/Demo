@@ -11,7 +11,8 @@
         android:layout_height="200dip"
         android:background="#ff8989"
         android:gravity="start"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/sacle"
@@ -35,8 +36,7 @@
         android:onClick="onClick"
         android:translationX="50dip"
         android:translationY="50dip"
-        android:translationZ="50dip"
-        android:visibility="gone" />
+        android:translationZ="50dip" />
 
     <TextView
         android:id="@+id/rotate"

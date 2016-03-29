@@ -158,7 +158,8 @@
         <activity android:name=".CoordinateActivity" />
         <activity android:name=".HealthActivity" />
         <activity android:name=".SpannableDemoActivity" />
-        <activity android:name=".ScrollerActivity"></activity>
+        <activity android:name=".ScrollerActivity" />
+        <activity android:name=".SwipeShowActivity"></activity>
     </application>
 
 </manifest>
