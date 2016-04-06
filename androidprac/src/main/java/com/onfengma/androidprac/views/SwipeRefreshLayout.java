@@ -38,8 +38,8 @@ import android.widget.RelativeLayout;
 
 /**
  * The SwipeRefreshLayout should be used whenever the user can refresh the
- * contents of a view via a vertical swipe gesture. The activity that
- * instantiates this view should add an OnRefreshListener to be notified
+ * contents of a contentView via a vertical swipe gesture. The activity that
+ * instantiates this contentView should add an OnRefreshListener to be notified
  * whenever the swipe to refresh gesture is completed. The SwipeRefreshLayout
  * will notify the listener each and every time the gesture is completed again;
  * the listener is responsible for correctly determining when to actually
@@ -47,10 +47,10 @@ import android.widget.RelativeLayout;
  * not be a refresh, it must call setRefreshing(false) to cancel any visual
  * indication of a refresh. If an activity wishes to show just the progress
  * animation, it should call setRefreshing(true). To disable the gesture and progress
- * animation, call setEnabled(false) on the view.
+ * animation, call setEnabled(false) on the contentView.
  * <p/>
- * <p> This layout should be made the parent of the view that will be refreshed as a
- * result of the gesture and can only support one direct child. This view will
+ * <p> This layout should be made the parent of the contentView that will be refreshed as a
+ * result of the gesture and can only support one direct child. This contentView will
  * also be made the target of the gesture and will be forced to match both the
  * width and the height supplied in this layout. The SwipeRefreshLayout does not
  * provide accessibility events; instead, a menu item must be provided to allow
@@ -305,7 +305,7 @@ public class SwipeRefreshLayout extends RelativeLayout {
      * Notify the widget that refresh state has changed. Do not call this when
      * refresh is triggered by a swipe gesture.
      *
-     * @param refreshing Whether or not the view should show refresh progress.
+     * @param refreshing Whether or not the contentView should show refresh progress.
      */
     public void setRefreshing(boolean refreshing) {
         if (mRefreshing != refreshing) {
@@ -446,8 +446,8 @@ public class SwipeRefreshLayout extends RelativeLayout {
     }
 
     /**
-     * @return Whether it is possible for the child view of this layout to
-     * scroll up. Override this if the child view is a custom view.
+     * @return Whether it is possible for the child contentView of this layout to
+     * scroll up. Override this if the child contentView is a custom contentView.
      */
     public boolean canChildScrollUp() {
         if (android.os.Build.VERSION.SDK_INT < 14) {
@@ -671,7 +671,7 @@ public class SwipeRefreshLayout extends RelativeLayout {
                                         Math.abs(yDiff) / mDistanceToTriggerSync));
                         updateContentOffsetTop((int) ((y - mLastMotionY) * 0.3 + mCurrentTargetOffsetTop));
                         if (mTarget.getTop() == getPaddingTop()) {
-                            // If the user puts the view back at the top, we
+                            // If the user puts the contentView back at the top, we
                             // don't need to. This shouldn't be considered
                             // cancelling the gesture as the user can restart from the top.
                             removeCallbacks(mCancel);

@@ -38,8 +38,8 @@ public class RefreshLayout extends LinearLayout {
     }
 
     /**
-     * @return Whether it is possible for the child view of this layout to
-     * scroll up. Override this if the child view is a custom view.
+     * @return Whether it is possible for the child contentView of this layout to
+     * scroll up. Override this if the child contentView is a custom contentView.
      */
     public boolean canChildScrollUp() {
         if (android.os.Build.VERSION.SDK_INT < 14) {

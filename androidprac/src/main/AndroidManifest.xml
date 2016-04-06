@@ -159,7 +159,9 @@
         <activity android:name=".HealthActivity" />
         <activity android:name=".SpannableDemoActivity" />
         <activity android:name=".ScrollerActivity" />
-        <activity android:name=".SwipeShowActivity"></activity>
+        <activity android:name=".SwipeShowActivity" />
+        <activity android:name=".OKHttpDemoActivity" />
+        <activity android:name=".WebViewPullActivity"></activity>
     </application>
 
 </manifest>

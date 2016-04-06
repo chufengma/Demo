@@ -171,8 +171,8 @@ final class SwipeProgressBar {
                 mClipRect.set(cx - clearRadius, 0, cx + clearRadius, height);
                 canvas.saveLayerAlpha(mClipRect, 0, 0);
                 // Only draw the trigger if there is a space in the center of
-                // this refreshing view that needs to be filled in by the
-                // trigger. If the progress view is just still animating, let it
+                // this refreshing contentView that needs to be filled in by the
+                // trigger. If the progress contentView is just still animating, let it
                 // continue animating.
                 drawTriggerWhileFinishing = true;
             }
@@ -245,13 +245,13 @@ final class SwipeProgressBar {
     }
 
     /**
-     * Draws a circle centered in the view.
+     * Draws a circle centered in the contentView.
      *
      * @param canvas the canvas to draw on
      * @param cx     the center x coordinate
      * @param cy     the center y coordinate
      * @param color  the color to draw
-     * @param pct    the percentage of the view that the circle should cover
+     * @param pct    the percentage of the contentView that the circle should cover
      */
     private void drawCircle(Canvas canvas, float cx, float cy, int color, float pct) {
         mPaint.setColor(color);
