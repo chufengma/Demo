@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Demo.iml" filepath="$PROJECT_DIR$/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agera/agera.iml" filepath="$PROJECT_DIR$/agera/agera.iml" />
       <module fileurl="file://$PROJECT_DIR$/androidprac/androidprac.iml" filepath="$PROJECT_DIR$/androidprac/androidprac.iml" />
     </modules>
   </component>

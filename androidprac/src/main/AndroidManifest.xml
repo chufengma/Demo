@@ -161,7 +161,10 @@
         <activity android:name=".ScrollerActivity" />
         <activity android:name=".SwipeShowActivity" />
         <activity android:name=".OKHttpDemoActivity" />
-        <activity android:name=".WebViewPullActivity"></activity>
+        <activity android:name=".WebViewPullActivity" />
+        <activity android:name=".ShakingDemoActivity" />
+        <activity android:name=".ChangeTopActivity" />
+        <activity android:name=".DialogDemoActivitity"></activity>
     </application>
 
 </manifest>

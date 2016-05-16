@@ -1,11 +1,15 @@
 package com.onfengma.androidprac;
 
 import com.onfengma.androidprac.MVP.MVPDemoActivity;
-
+import com.onefengma.event.agera.AgreaDemoActivity;
 /**
  * Created by chufengma on 15/8/2.
  */
 public enum Enter {
+    AgreaDemoActivity(AgreaDemoActivity.class),
+    DialogDemoActivitity(DialogDemoActivitity.class),
+    ChangeTopActivity(ChangeTopActivity.class),
+    ShakingDemoActivity(ShakingDemoActivity.class),
     WebViewPullActivity(WebViewPullActivity.class),
     OkHttpDemoActivity(OKHttpDemoActivity.class),
     SwipeShowActivity(SwipeShowActivity.class),
