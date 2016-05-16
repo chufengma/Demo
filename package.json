@@ -1,0 +1,26 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "dependencies": {
+    "react-native": "^0.24.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chufengma/Demo.git"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "chufengma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chufengma/Demo/issues"
+  },
+  "homepage": "https://github.com/chufengma/Demo#readme"
+}

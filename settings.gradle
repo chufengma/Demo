@@ -1,2 +1,2 @@
-include ':androidprac'
+include ':androidprac', ':agera'
 //, ':vedio', ':material', ':sdk', ':eventbus'
