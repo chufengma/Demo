@@ -5,6 +5,7 @@ import com.onfengma.androidprac.MVP.MVPDemoActivity;
  * Created by chufengma on 15/8/2.
  */
 public enum Enter {
+    IMActivity(IMActivity.class),
     RichTextActivity(RichTextActivity.class),
     DialogDemoActivitity(DialogDemoActivitity.class),
     ChangeTopActivity(ChangeTopActivity.class),

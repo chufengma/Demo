@@ -163,10 +163,11 @@
         <activity android:name=".WebViewPullActivity" />
         <activity android:name=".ShakingDemoActivity" />
         <activity android:name=".ChangeTopActivity" />
-        <activity android:name=".DialogDemoActivitity"></activity>
+        <activity android:name=".DialogDemoActivitity" />
         <activity android:name=".OkhttpDemoActivity" />
         <activity android:name=".WebViewPullActivity" />
-        <activity android:name=".RichTextActivity"></activity>
+        <activity android:name=".RichTextActivity" />
+        <activity android:name=".IMActivity"></activity>
     </application>
 
 </manifest>
